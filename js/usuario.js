@@ -6,7 +6,6 @@ $(document).ready(function() {
       event.preventDefault();
       var ls_usua = $("#inp_usua").val();
       var ls_pass = $("#inp_pass").val();
-      console.log(ls_usua +' - ' +ls_pass);
 
       $.ajax({
         url:"./server/login.php",
@@ -17,24 +16,28 @@ $(document).ready(function() {
         beforeSend:function() {
           console.log("Enviando información...");
         } ,
-        success: function (response,estado,xhr) {
+        success: function (parametro,estado,xhr) {
           if (xhr.status == 200) {
-            console.log(response + 'dentro del if');
-            if (php_response.conexion=="OK") {
-          if (php_response.acceso == 'CONCEDIDO') {
-            window.location.href = 'welcome.html';
-          }else {
-            alert(php_response.motivo);
+            var response = JSON.parse(parametro);
+            if (response.conexion == "OK") {
+              switch (response.acceso) {
+                case 'CONCEDIDO':
+                  window.location.href = 'informacion.html';
+                  break;
+                case 'RECHAZADO':
+                  alert("USUARIO INCORRECTO");
+                  break;
+                default:
+              }
+            }else{
+              alert(response.conexion);
+            }
           }
-        }else{
-          alert(php_response.conexion);
-        }
-
-          }
-
         },
         error: function () {
           console.log('Error en la Comunicación');
+          alert("ARCHIVO EN SERVER NO EXISTE");
+
         }
       }).done(function(data) {
         console.log("Se establecio Comunicación");
