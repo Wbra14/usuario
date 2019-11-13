@@ -20,6 +20,7 @@ class ProfileBD
   // Funcion para conexion de bbdd
   function Connect_bd($nombre_db)
   {
+    //$c = new PDO("sqlsrv:Server=localhost,1521;Database=testdb", "NombreUsuario", "Contraseña");
     $connectionInfo = array( "Database"=>$nombre_db, "UID"=>$this->user, "PWD"=>$this->password,"CharacterSet"=>"UTF-8");
     $this->conexion =  sqlsrv_connect( $this->host, $connectionInfo);
     if ($this->conexion) {

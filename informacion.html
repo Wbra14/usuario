@@ -35,9 +35,6 @@
 
       </header>
       <div >
-
-        <h2>Toggleable Tabs</h2>
-        <br>
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
           <li class="nav-item">
@@ -54,8 +51,30 @@
         <!-- Tab panes -->
         <div class="tab-content">
           <div id="home" class="container tab-pane active"><br>
-            <h3>Resumen</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <h3>Datos Generales</h3>
+            <form class="form-inline">
+              <label for="nom" class="mr-sm-2">Agencia: </label>
+              <input type="text" class="form-control" id="agencia" disabled>
+              <label for="nom" class="mr-sm-2">Empleado: </label>
+              <input type="text" class="form-control" id="empleado" disabled>
+              <label for="nom" class="mr-sm-2">CI:</label>
+              <input type="text" class="form-control" id="ci" disabled>
+            </form>
+            <br><br>
+
+            <form >
+              <div class="form-group">
+                <label for="nom">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" disabled>
+              </div>
+               <div class="form-group">
+                 <label for="dir">Dirección:</label>
+                 <input type="text" class="form-control" id="direccion" disabled>
+               </div>
+              </form>
+
+
+
           </div>
           <div id="menu1" class="container tab-pane fade"><br>
             <h3>Menu 1</h3>
@@ -80,5 +99,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="js/informacion.js"></script>
+
   </body>
 </html>
