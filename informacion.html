@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/estilos.css">
     <script src="https://kit.fontawesome.com/d767e7f1ae.js" crossorigin="anonymous"></script>
 
+
   </head>
   <body>
     <div class="container">
@@ -50,18 +51,23 @@
 
         <!-- Tab panes -->
         <div class="tab-content">
-          <div id="home" class="container tab-pane active"><br>
-            <h3>Datos Generales</h3>
-            <form class="form-inline">
-              <label for="nom" class="mr-sm-2">Agencia: </label>
-              <input type="text" class="form-control" id="agencia" disabled>
-              <label for="nom" class="mr-sm-2">Empleado: </label>
-              <input type="text" class="form-control" id="empleado" disabled>
-              <label for="nom" class="mr-sm-2">CI:</label>
-              <input type="text" class="form-control" id="ci" disabled>
-            </form>
+          <div id="home" class=" container tab-pane active tab_btn"><br>
+            <h3><strong>Datos Generales</strong></h3>
+            <div class="row">
+              <div class="col-xs-12 col-md-4">
+                <label for="nom" class="mr-sm-2">Agencia: </label>
+                <input type="text" class="form-control" id="agencia" disabled>
+              </div>
+              <div class="col-xs-12 col-md-4">
+                <label for="nom" class="mr-sm-2">Empleado: </label>
+                <input type="text" class="form-control" id="empleado" disabled>
+              </div>
+              <div class="col-xs-12 col-md-4">
+                <label for="nom" class="mr-sm-2">CI:</label>
+                <input type="text" class="form-control" id="ci" disabled>
+              </div>
+            </div>
             <br><br>
-
             <form >
               <div class="form-group">
                 <label for="nom">Nombre:</label>
@@ -76,11 +82,51 @@
 
 
           </div>
-          <div id="menu1" class="container tab-pane fade"><br>
-            <h3>Menu 1</h3>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <div id="menu1" class="container tab-pane fade tab_btn"><br>
+            <div class="row">
+              <div class="col-xs-12 col-md-4">
+                <label for="nom" class="mr-sm-2">Fecha Inicial: </label>
+                <input class="fecha" type="date" name="d_fecini" id="fecini">
+              </div>
+              <div class="col-xs-12 col-md-4">
+                <label for="nom" class="mr-sm-2">Fecha Final: </label>
+                <input class="fecha" type="date" name="d_fecfin">
+                <!--<input type="text" class="form-control" id="fecfin" readonly>-->
+              </div>
+              <div class="col-xs-12 col-md-4">
+                <label for="nom" class="mr-sm-2"> </label>
+                <button type="button" class="btn btn-primary  btn-block" id="btn_aporte">Buscar</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12">
+                <h3>Cuenta individual</h3>
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th data-field="tp">TIPO APORTE</th>
+                      <th data-field="ap">APORTE</th>
+                      <th data-field="re">RENDIMIENTO</th>
+                      <th data-field="tot">TOTAL</th>
+
+                    </tr>
+                  </thead>
+                  <tbody id="table-body">
+
+                  </tbody>
+                </table>
+              </div>
+              <div class="col s12 acciones">
+                <a class="btn-floating" id="add-viaje" href="new_viaje.html"><i class="material-icons brown">add</i></a>
+
+              </div>
+            </div>
+
+
+
+
           </div>
-          <div id="menu2" class="container tab-pane fade"><br>
+          <div id="menu2" class="container tab-pane fade tab_btn"><br>
             <h3>Menu 2</h3>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
           </div>
@@ -89,8 +135,9 @@
 
     </div>
 
-
-
+    <br>
+    <br>
+    <br>
 
 
 
@@ -99,6 +146,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="js/informacion.js"></script>
+
 
   </body>
 </html>

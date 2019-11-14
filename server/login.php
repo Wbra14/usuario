@@ -17,6 +17,7 @@
         $response['acceso'] = 'CONCEDIDO';
         $response['motivo'] = 'USUARIO CORRECTO';
         // variable Super Global
+        session_set_cookie_params(0); 
         session_start();
         $_SESSION['cod_cliente'] = $fila['cod_cliente'];
       } else {

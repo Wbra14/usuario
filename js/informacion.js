@@ -3,6 +3,12 @@ $(document).ready(function() {
   //console.log("Ok info js");
   // Inicia valores alo que habre la pantalla
   getInitData();
+
+
+
+
+
+
   // Inicia nav cerrar sesion
   $("#salir").click(function functionName() {
       event.preventDefault();
@@ -44,10 +50,7 @@ function getInitData() {
             document.getElementById("nombre").value = response.datos[0].nombre;
             document.getElementById("direccion").value = response.datos[0].direccion;
 
-
-
-
-            console.log("PROCESO OK");
+            //console.log("PROCESO OK");
             break;
           case 'RECHAZADO':
               console.log(parametro.motivo);

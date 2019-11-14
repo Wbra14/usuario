@@ -48,6 +48,19 @@ body{
 
 }
 
+.fecha{
+  width: 95%;
+	padding: 5px;
+  border-radius: 5px;
+  margin: 3px 2% 2% 2%;
+
+}
+.tab_btn{
+  background: rgb(255, 255, 255);
+  opacity: 0.93;
+  padding: 10px;
+}
+
 button{
   width: 60%;
   margin: 5px 0 25px;
@@ -58,4 +71,8 @@ button{
 
 .forgot a{
   color: white;
+}
+
+h3{
+  text-align: center;
 }
